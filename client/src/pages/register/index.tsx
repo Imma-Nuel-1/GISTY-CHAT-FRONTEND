@@ -10,7 +10,6 @@ const Register: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [showPassword, setShowPassword] = useState<boolean>(false); // State for toggling password visibility
-
   const navigate = useNavigate(); // Hook to navigate programmatically
 
   const handleSubmit = async (e: React.FormEvent) => {

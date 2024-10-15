@@ -20,7 +20,7 @@ const Login: React.FC = () => {
       // Assuming response has a success field and a message
       if (response.success) {
         toast.success(response.message); // Show success message from backend
-        navigate("/LandingPage"); // Navigate to the landing page
+        navigate("/home"); // Navigate to the landing page
       } else {
         toast.error(response.message); // Show error message from backend (e.g., "Invalid email or password")
       }

@@ -60,3 +60,13 @@ export const deleteUserById = async (id: string): Promise<any> => {
     throw error;
   }
 };
+// Get Current User
+export const GetCurrentUser = async (): Promise<any> => {
+  try {
+    const response = await api.get("/api/get-current-user"); // Adjust the endpoint as needed
+    return response.data; // Assuming the response has a 'data' field
+  } catch (error) {
+    console.error("Error fetching current user:", error);
+    return { success: false, message: "Failed to fetch user" }; // Handle error appropriately
+  }
+};

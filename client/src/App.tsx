@@ -4,6 +4,7 @@ import Login from "./pages/login";
 import { Toaster } from "react-hot-toast";
 import LandingPage from "./pages/landingpage";
 import Home from "./pages/home";
+// import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -14,9 +15,17 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<Home />} />
+          {/* <Route path="/home" element={<Home />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          {/* <Route
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          /> */}
         </Routes>
       </BrowserRouter>
     </div>
